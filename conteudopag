@@ -19,3 +19,16 @@ ESPORTES
 -NATUREZA-
 VIVENCIAS
 -CAFÉ- É uma paixão
+
+
+<header>
+        <img src="imagens/Filipe-150bw.png" alt="logo">
+        <br>
+        <nav class="navegacao">
+            <a href="home.html" class="link active">Home</a>
+            <a href="sobre.html" class="link">Sobre</a>
+            <a href="curriculo.html" class="link">Currículo</a>
+            <a href="#" class="link">Projetos/Portfólio</a>
+            <a href="contato.html" class="link">Contato</a>
+        </nav>
+    </header>
