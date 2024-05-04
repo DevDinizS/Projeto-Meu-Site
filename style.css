@@ -346,6 +346,18 @@ section#img03 p {
     margin-right: 200px;
 }
 
+.Curiosidades {
+    color: white;
+}
+
+.Curiosidades h2 {
+    text-align: left;
+}
+
+.Curiosidades p {
+    text-align: left;
+}
+
 
 /*page03*/
 
