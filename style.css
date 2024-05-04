@@ -139,6 +139,11 @@ p a:hover {
     text-decoration: underline;
 }
 
+article.home-black {
+    background-color: black;
+    color: white;
+}
+
 article p {
     font-family: var(--fonte02);
     font-size: 22px;
@@ -149,10 +154,6 @@ article p {
     padding-right: 350px;
 }
 
-section {
-    background-color: none;
-}
-
 section.imagem {
     font-family: var(--fonte01);
     padding-bottom: 16vh;
@@ -160,6 +161,7 @@ section.imagem {
     text-shadow: 1px 5px 7px rgba(0, 0, 0, 0.473);
     box-shadow: 0px -20px 20px 20px rgba(0, 0, 0, 0.527);
     text-align: center;
+    animation: fadeIn 1.3s ease-in;
 }
 
 section > h2 {
@@ -168,6 +170,7 @@ section > h2 {
     border-radius: 10px;
     font-size: 40px;
     color: white;
+    animation: fadeIn 0.6s ease-in-out;
 }
 
 section.imagem p {
@@ -176,6 +179,7 @@ section.imagem p {
     border-radius: 10px;
     padding: 5px;
     color: white;
+    animation: fadeIn 0.6s ease-in-out;
 }
 
 section#img01 {
@@ -189,7 +193,6 @@ section#img01 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 98%;
     height: 98%;
 }
 
@@ -202,7 +205,7 @@ section#img01 {
     margin-bottom: 100px;
     background-image: url('imagens/foto\ caça\ b&w.jpeg');
     background-size: cover;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
     float: left;
     box-shadow: -10px 6px 20px rgba(0, 0, 0, 0.37);
@@ -235,12 +238,15 @@ section#img01 {
     background-position: left center;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 15vh;
-    padding-bottom: 15vh;
+    padding-top: 16vh;
+    padding-bottom: 16vh;
     color: white;
     font-family: var(--fonte02);
     text-align: center;
     box-shadow: inset 0px 8px 20px rgba(0, 0, 0, 0.603);
+    animation: fadeIn 2s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 40%;
 }
 
 .imagem02 h1 {
@@ -253,6 +259,9 @@ section#img01 {
     margin-bottom: 40px;
     padding: 5px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.356);;
+    animation: fadeIn 2s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 20%;
 }
 
 .imagem02 > p {
@@ -266,6 +275,9 @@ section#img01 {
     margin-bottom: 20px;
     padding: 5px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.356);
+    animation: fadeIn ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 20%;
 }
 
 .imagem02 > p > a {
@@ -276,14 +288,29 @@ section#img01 {
 
 .imagem02 a:hover {
     text-decoration: underline;
-    padding: 1px;
 }
 
-.imagem02 > a {
-    padding: 2px;
-    font-size: 20px;
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+.imagem02 > a.saiba {
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
     text-decoration: none;
     color: white;
+    transition: all 0.6s ease; 
+}
+
+.imagem02 > a:hover.saiba {
+    text-decoration: underline;
+    padding: 1px;
+    color: #d1b307;
+    transform: scale(1.1);
 }
 
 abbr {
